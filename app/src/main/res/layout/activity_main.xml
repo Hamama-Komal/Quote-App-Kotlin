@@ -79,44 +79,24 @@
         android:layout_height="wrap_content"
         android:paddingVertical="10dp"
         android:orientation="horizontal"
+        android:weightSum="2"
         android:layout_marginBottom="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/back"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/backward" />
 
-        <TextView
-            android:id="@+id/back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:fontFamily="@font/montserrat_light"
-            android:text="Back"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
-
-
-        <TextView
-            android:id="@+id/next"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:fontFamily="@font/montserrat_light"
-            android:text="Next"
-            android:textAlignment="viewEnd"
-            android:textColor="@color/black"
-            android:textSize="20dp" />
 
         <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:id="@+id/next"
+            android:layout_width="27dp"
+            android:layout_height="27dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/forward" />
     </LinearLayout>

@@ -2,6 +2,7 @@ package com.example.quoteapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,11 +31,18 @@ class MainActivity : AppCompatActivity() {
         setQuote(mainViewModel.getQuote())
 
         binding.next.setOnClickListener{
-            setQuote(mainViewModel.nextQuote())
+            if(mainViewModel.index < mainViewModel.quoteList.size - 1) {
+                setQuote(mainViewModel.nextQuote())
+            }
         }
 
         binding.back.setOnClickListener{
-            setQuote(mainViewModel.previousQuote())
+            if(mainViewModel.index > 0) {
+                setQuote(mainViewModel.previousQuote())
+            }
+            else{
+                Toast.makeText(this@MainActivity, "You reached at the Start", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.share.setOnClickListener{
